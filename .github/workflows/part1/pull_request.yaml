@@ -1,4 +1,4 @@
-name: pull-request-workflow  # 워크플로우의 이름을 정의합니다.
+name: pull-request-workflow 2 # 워크플로우의 이름을 정의합니다.
 
 on: 
   pull_request:
