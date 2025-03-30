@@ -1,0 +1,14 @@
+name: pull-request-workflow  # 워크플로우의 이름을 정의합니다.
+
+on: pull_request
+    
+jobs:
+  pull-request-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        run: echo Hello, world!
+      - name: step2
+        run: |
+          echo "Hello, world!"
+          echo github actions
