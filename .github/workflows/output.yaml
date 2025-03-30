@@ -1,0 +1,16 @@
+name: output
+
+on:
+  push
+
+jobs:
+  output: # 작업 정의
+    runs-on: ubuntu-latest # 실행 환경
+    steps:
+      - name: echo output # 콘솔 출력
+        id: check-output # 아이디
+        run: |
+          echo "test=hello" >> $GITHUB_OUTPUT # 출력 파일에 출력
+      - name: echo output # 콘솔 출력
+        run: |
+          echo ${{ steps.check-output.outputs.test }} # 출력 파일에서 출력
