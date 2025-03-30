@@ -1,6 +1,8 @@
 name: pull-request-workflow  # 워크플로우의 이름을 정의합니다.
 
-on: pull_request
+on: 
+  pull_request:
+    types: [opened]
     
 jobs:
   pull-request-job:
