@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: check env & secret
         run: |
-          echo ${{ env.level }}
-          echo ${{ secrets.level }}
+          echo ${{ vars.level }} # 변수
+          echo ${{ secrets.key }} # 비밀번호
 
