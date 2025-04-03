@@ -9,6 +9,14 @@ jobs:
     steps:
       - name: check env & secret
         run: |
-          echo ${{ vars.level }} # 변수
-          echo ${{ secrets.key }} # 비밀번호
+          echo ${{ vars.level }} # 환경변수 출력
+          echo ${{ secrets.key }} # 시크릿변수 출력
 
+  get-env-dev:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: check env & secret
+        run: |
+          echo ${{ vars.level }} # 환경변수 출력
+          echo ${{ secrets.key }} # 시크릿변수 출력
